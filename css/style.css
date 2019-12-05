@@ -1,3 +1,41 @@
+header{
+    min-height: 100vh;
+}
+
+.hero{
+    margin-top: 15vh;
+    text-align: center;
+}
+
 h1{
     text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    letter-spacing: 30px;
+}
+
+.hero h1{
+    color: black;
+}
+
+.hero svg{
+    height: 38vh;
+    margin-top: 10vh;
+    transition: all .8s;
+}
+
+.hero svg.terminado{
+    transform: rotate(-360deg) scale(1.1) translateY(10px);
+}
+
+.hero svg.terminado .g{
+    fill: yellow;
+}
+
+.hero svg *{
+    fill: none;
+    stroke: #000000;
+    stroke-width: 1;
+    transition: fill 2s;
 }
