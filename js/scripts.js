@@ -16,7 +16,60 @@ function trazar(){
     });
 }
 
+// Tipeo de palabras
+function tipear(){
+    new TypeIt('#escritura',{
+        strings: ['ELEGANTES','MODERNAS','RESPONSIVE'],
+        speed: 100,
+        deleteSpeed: 50,
+        loop: true,
+        breakLines: false,
+    })
+}
+
+// Crrusel 2 section intro
+function carrusel2(){
+    $('#carruselClientes2').owlCarousel({
+        items: 3,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        loop: true,
+        autoplayHoverPause: true,
+    })
+}
+
 //Cuando la pag este lista
 window.onload = () => {
     trazar();
-}
+    tipear();
+    carrusel2();
+};
+
+// Controles Video - section intro
+//Play
+$('#playVid, #iconoPlayVid').on('click', () => {
+    $('#videoPresentacion').get(0).play();
+    $('#iconoPlayVid').css('opacity', 0);
+});
+
+//Pause
+$('#pauseVid').on('click', () => {
+    $('#videoPresentacion').get(0).pause();
+    $('#iconoPlayVid').css('opacity', 1);
+
+});
+//Stop
+$('#stopVid').on('click', () => {
+    $('#videoPresentacion').get(0).load();
+    $('#iconoPlayVid').css('opacity', 1);
+});
+
+//Smooth Scroll Menu Navegacion
+$('.nav-link').on('click', function(){
+    const destino = $(this).attr('href');
+    $('html').animate(
+        { scrollTop: $(destino).offset().top },
+        1000,
+    );
+});
