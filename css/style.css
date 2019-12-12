@@ -7,12 +7,25 @@ h1{
     letter-spacing: 30px;
 }
 
+h2{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+}
 .padding-section{
     padding: 120px 0;
 }
 
 .grey-section{
     background-color: rgb(211, 211, 211);
+}
+
+.divider{
+    width: 20px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #bd9f86;
 }
 /* Fin General*/
 
@@ -144,3 +157,97 @@ header{
     cursor: pointer;
 }
 /* Fin Intro*/
+
+/* Seccion Proceso*/
+
+.subtitle{
+    margin-bottom: 80px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #333;
+}
+
+.subtitle i{
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+#process .reveal{
+    opacity: 0;
+    transform: translateX(40px);
+    transition-duration: 1.2s;
+}
+
+#process .reveal.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.marginsY{
+    margin: 100px 0;
+}
+
+.facts .numero{
+    font-family: 'Lato', sans-serif;
+    font-size: 7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #cccec8;
+}
+
+.facts article{
+    padding-left: 60px;
+    color: rgb(87, 84, 84);
+    transform: translateY(-55px);
+}
+
+.facts article h3{
+    font-size: 1.2rem;
+}
+/* Fin proceso*/
+
+/* Seccion Skills*/
+#skills{
+    padding: 50px 0;
+    /* background-image: url(../img/backgrounds/bg-skills.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; */
+}
+
+#skills .elemento{
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+#skills .elemento article{
+    padding: 20px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, .2);
+}
+
+#skills i{
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #fff;
+}
+
+#skills .elemento h5{
+    text-transform: lowercase;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-style: italic;
+}
+
+#skills .numero{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 10px;
+    font-size: 42px;
+    color: #fff;
+    font-weight: 500;
+}
+/* fin skills*/

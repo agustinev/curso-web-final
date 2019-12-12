@@ -1,8 +1,16 @@
-//Rotacion de logo
+//Escuchador evento scroll
 $(window).on('scroll', () => {
+//Rotacion de logo
     const scrollRealizado = $(window).scrollTop();
     const giraRuedita = `${scrollRealizado * 0.1}deg`;
     $('#logo').css('transform', `rotate(${giraRuedita})`);
+
+    //Aparicion Imagenes
+    const altura = $('.reveal').offset().top;
+    const margen = window.innerHeight * 0.5;
+    if(scrollRealizado >= altura - margen){
+        $('.reveal').addClass('visible'); 
+    }
 });
 
 //Trazado de svg
