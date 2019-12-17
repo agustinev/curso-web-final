@@ -1,16 +1,18 @@
 //Escuchador evento scroll
 $(window).on('scroll', () => {
-//Rotacion de logo
+    //Rotacion de logo
     const scrollRealizado = $(window).scrollTop();
     const giraRuedita = `${scrollRealizado * 0.1}deg`;
     $('#logo').css('transform', `rotate(${giraRuedita})`);
 
-    //Aparicion Imagenes
-    const altura = $('.reveal').offset().top;
-    const margen = window.innerHeight * 0.5;
-    if(scrollRealizado >= altura - margen){
-        $('.reveal').addClass('visible'); 
-    }
+    //Aparicion Imagenes   
+    $('.reveal').each(function(){
+        const altura = $(this).offset().top;
+        const margen = window.innerHeight * 0.7;
+        if(scrollRealizado >= altura - margen){
+            $(this).addClass('visible'); 
+        }
+    });
 });
 
 //Trazado de svg
@@ -47,11 +49,19 @@ function carrusel2(){
     })
 }
 
+//Quitar Spinner
+function quitarSpinner(){
+    $('.spinner').fadeOut(1000, () => {
+        $('h1').animate({'letter-spacing': '20px'}, 800)
+    });
+}
+
 //Cuando la pag este lista
 window.onload = () => {
     trazar();
     tipear();
     carrusel2();
+    quitarSpinner();
 };
 
 // Controles Video - section intro
@@ -74,7 +84,7 @@ $('#stopVid').on('click', () => {
 });
 
 //Smooth Scroll Menu Navegacion
-$('.nav-link').on('click', function(){
+$('.nav-link, .button-link').on('click', function(){
     const destino = $(this).attr('href');
     $('html').animate(
         { scrollTop: $(destino).offset().top },

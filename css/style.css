@@ -27,6 +27,10 @@ h2{
     margin-bottom: 40px;
     border-bottom: 3px solid #bd9f86;
 }
+
+img.responsve{
+    max-width: 100%;
+}
 /* Fin General*/
 
 /* Header*/
@@ -251,3 +255,160 @@ header{
     font-weight: 500;
 }
 /* fin skills*/
+
+/* Seccion team*/
+
+#team article{
+    text-align: center;
+    position: relative;
+}
+
+#team article img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#team article ul{
+    margin: 0;
+    padding: 0 10px;
+    list-style-type: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+}
+
+#team article ul .divider{
+    width: 50%;
+    margin: 0 25%;
+    border-bottom: 1px solid  #bd9f86;
+    opacity: .5;
+}
+
+#team article ul li a{
+    display: block;
+    padding: 8px 5px;
+    color: #bd9f86;
+}
+
+#team article .header .divider{
+    width: 50px;
+    margin: 20px auto;
+    border-bottom: 1px solid black;
+    opacity: .2;
+}
+
+#team .reveal{
+    opacity: 0;
+    transition-duration: 2s;
+    transform: translateY(200px);
+}
+
+#team .reveal.visible{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.delay-2{
+    transition-delay: .2s;
+}
+
+.delay-4{
+    transition-delay: .4s;
+}
+
+#team .row:last-of-type{
+    margin-top: 100px;
+}
+
+.claimbar{
+    background-image: url(../img/graphic/contain-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 60px;
+    text-align: center;
+}
+
+.claimbar p{
+    text-transform: uppercase;
+    color: #bd9f86;
+    font-size: .9rem;
+}
+
+#team div[class^='progress']{
+    height: 4px;
+    background: rgba(0,0,0,.2);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#team div[class^='progress']:before{
+    content: '';
+    position: absolute;
+    background: black;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition-duration: 1s;
+    width: 0;
+}
+
+#team .visible .progress70:before{
+    width: 70%;
+    transition-delay: 1s;
+}
+
+#team .visible .progress50:before{
+    width: 50%;
+    transition-delay: 1.6s;
+}
+
+#team .visible .progress90:before{
+    width: 90%;
+    transition-delay: 1.4s;
+}
+
+#team .visible .progress100:before{
+    width: 100%;
+    transition-delay: 1.2s;
+}
+/* Fin Team*/
+
+/* Seccion Video*/
+#video{
+    text-align: center;
+    color: #fff;
+}
+/* Fin Video*/
+
+/*Spinner*/
+.spinner{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #444;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner img{
+    filter: invert(100%);
+    animation: rotar 5s infinite linear;
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+/*Fin spinner*/
