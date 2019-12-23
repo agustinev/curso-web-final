@@ -55,11 +55,13 @@ header{
 .hero svg{
     height: 38vh;
     margin-top: 10vh;
+    -webkit-transition: all .8s;
     transition: all .8s;
 }
 
 .hero svg.terminado{
-    transform: rotate(-360deg) scale(1.1) translateY(10px);
+    -webkit-transform: rotate(-360deg) scale(1.1) translateY(10px);
+            transform: rotate(-360deg) scale(1.1) translateY(10px);
 }
 
 .hero svg.terminado .g{
@@ -70,6 +72,7 @@ header{
     fill: none;
     stroke: #000000;
     stroke-width: 1;
+    -webkit-transition: fill 2s;
     transition: fill 2s;
 }
 /* Fin Animacion*/
@@ -79,7 +82,8 @@ header{
 /* Seccion Intro*/
 
 #intro-nosotros{
-    box-shadow: inset 0px 10px 20px rgba(0,0,0,.05);
+    -webkit-box-shadow: inset 0px 10px 20px rgba(0,0,0,.05);
+            box-shadow: inset 0px 10px 20px rgba(0,0,0,.05);
 }
 
 #intro-nosotros h2{
@@ -101,14 +105,19 @@ header{
 }
 
 #carruselClientes2 img{
-    transform: scale(0.8);
-    filter: grayscale(90%);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+    -webkit-transition: all .5s ease-in;
     transition: all .5s ease-in;
 }
 
 #carruselClientes2 img:hover{
-    transform: scale(1);
-    filter: grayscale(0%);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
 }
 
 #videoPresentacion{
@@ -144,7 +153,8 @@ header{
     font-size: 5rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 10;
     cursor: pointer;
 }
@@ -167,13 +177,16 @@ header{
 
 #process .reveal{
     opacity: 0;
-    transform: translateX(40px);
-    transition-duration: 1.2s;
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+    -webkit-transition-duration: 1.2s;
+            transition-duration: 1.2s;
 }
 
 #process .reveal.visible{
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
 }
 
 .marginsY{
@@ -191,7 +204,8 @@ header{
 .facts article{
     padding-left: 60px;
     color: rgb(87, 84, 84);
-    transform: translateY(-55px);
+    -webkit-transform: translateY(-55px);
+            transform: translateY(-55px);
 }
 
 .facts article h3{
@@ -289,21 +303,26 @@ header{
 
 #team .reveal{
     opacity: 0;
-    transition-duration: 2s;
-    transform: translateY(200px);
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
 }
 
 #team .reveal.visible{
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
 }
 
 .delay-2{
-    transition-delay: .2s;
+    -webkit-transition-delay: .2s;
+            transition-delay: .2s;
 }
 
 .delay-4{
-    transition-delay: .4s;
+    -webkit-transition-delay: .4s;
+            transition-delay: .4s;
 }
 
 #team .row:last-of-type{
@@ -339,28 +358,33 @@ header{
     left: 0;
     top: 0;
     height: 100%;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
     width: 0;
 }
 
 #team .visible .progress70:before{
     width: 70%;
-    transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
 }
 
 #team .visible .progress50:before{
     width: 50%;
-    transition-delay: 1.6s;
+    -webkit-transition-delay: 1.6s;
+            transition-delay: 1.6s;
 }
 
 #team .visible .progress90:before{
     width: 90%;
-    transition-delay: 1.4s;
+    -webkit-transition-delay: 1.4s;
+            transition-delay: 1.4s;
 }
 
 #team .visible .progress100:before{
     width: 100%;
-    transition-delay: 1.2s;
+    -webkit-transition-delay: 1.2s;
+            transition-delay: 1.2s;
 }
 /* Fin Team*/
 
@@ -380,23 +404,45 @@ header{
     left: 0;
     background-color: #444;
     z-index: 9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .spinner img{
-    filter: invert(100%);
-    animation: rotar 5s infinite linear;
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+    -webkit-animation: rotar 5s infinite linear;
+            animation: rotar 5s infinite linear;
+}
+
+@-webkit-keyframes rotar{
+    from{
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    to{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 }
 
 @keyframes rotar{
     from{
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 
     to{
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
 }
 /*Fin spinner*/
@@ -444,24 +490,30 @@ header{
 
 #proyectos img.reveal{
     opacity: 0;
-    transform: translateX(2000px);
-    transition-duration: 1s;
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
 }
 
 #proyectos img.reveal.visible{
     opacity: 1;
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
 }
 /* FIN SECCIÓN PROYECTOS */
 
 /* SECCIÓN TRABAJOS */
 #trabajos img{
     width: 100%;
-    filter: grayscale(70%);
-    transition-duration: 0.5s;
+    -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
 }
 #trabajos img:hover{
-    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
 }
 
 .no-padding{
@@ -525,7 +577,8 @@ footer ul li{
 /* Correcion menu reponsive*/
 @media screen and (max-width: 767px){
     .navbar-brand{
-        align-self: start;
+        -ms-flex-item-align: start;
+            align-self: start;
     }
     nav > div{
         text-align: right;
